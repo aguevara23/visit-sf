@@ -1,0 +1,42 @@
+.flexnav {
+  display: flex;
+  align-items: center;
+  /*background: rgba(0,0,0,0.5);*/
+  padding-left: 55px;
+  padding-right: -25px;
+  flex: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  margin-top: 15px;
+
+
+  &__right {
+    color: white;
+    display:flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: flex-end;
+
+    li {
+      padding: 20px 75px;
+    }
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  a {
+    transition: all .2s ease-out;
+  }
+
+  a:hover {
+    font-style: italic;
+    transform: scale(2);
+    color: blue;
+  }
+}
