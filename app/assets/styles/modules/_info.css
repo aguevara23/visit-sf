@@ -90,10 +90,12 @@
     padding-top: 15px;
 
     input {
-      width: 50%;
+      width: 100%;
       border: none;
       border-bottom: 1px solid lightgray;
       flex: 1;
+      padding-top: 15px;
+      padding-bottom: 10px;
       background: rgba(255, 255, 255, 0.75);
 
       @mixin atMedium {
