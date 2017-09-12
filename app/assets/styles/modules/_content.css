@@ -1,21 +1,52 @@
 .content {
   display: flex;
+  position: relative;
+
+  @mixin atMedium {
+
+  }
+
+
 
   &__left {
-    flex: 1;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @mixin atMedium {
+      text-align: left;
+      position: static;
+      flex: 1;
+
+    }
+
   }
 
   &__right {
-    flex: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @mixin atMedium {
+      flex: 1;
+      position: static;
+    }
 
     img {
-      width: 65vw;
+      width: 100vw;
       height: 100vh;
       object-fit: cover;
+
+      @mixin atMedium {
+        width: 65vw;
+      }
     }
   }
 }

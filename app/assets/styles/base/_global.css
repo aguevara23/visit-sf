@@ -13,6 +13,11 @@ html, body {
 .wrapper {
   display: flex;
   position: relative;
+  flex-direction: column;
+
+  @mixin atMedium {
+    flex-direction: row;
+  }
 }
 
 ul {

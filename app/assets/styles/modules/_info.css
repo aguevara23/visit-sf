@@ -1,11 +1,18 @@
 .info {
-  background: white;
-  width: 75%;
-  height: 70vh;
+  background: rgba(255,255,255,0.75);
+  width: 85%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 40px 30px;
 
+  @mixin atMedium {
+    background: white;
+    width: 75%;
+    height: 70vh;
+    padding: 0;
+  }
 
   &__title {
     margin-bottom: 20px;
@@ -16,7 +23,27 @@
       text-transform: uppercase;
       font-weight: bold;
       letter-spacing: 2px;
-      font-size: 2.6rem;
+      font-size: 1.9rem;
+
+      @mixin atMedium {
+        font-size: 2.6rem;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @mixin atMedium {
+        display: block;
+      }
+    }
+
+    &--mobile {
+      display: block;
+
+      @mixin atMedium {
+        display: none;
+      }
     }
   }
 
@@ -44,7 +71,13 @@
     border-bottom: 1px solid lightgray;
     padding-bottom: 15px;
     padding-top: 25px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.75);
     /*padding-left: 15px;*/
+
+    @mixin atMedium {
+      background: white;
+    }
   }
 
   &--selected {
@@ -57,9 +90,15 @@
     padding-top: 15px;
 
     input {
+      width: 50%;
       border: none;
       border-bottom: 1px solid lightgray;
       flex: 1;
+      background: rgba(255, 255, 255, 0.75);
+
+      @mixin atMedium {
+        /*background: white;*/
+      }
     }
   }
 

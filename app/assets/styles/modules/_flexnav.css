@@ -11,7 +11,11 @@
   z-index: 3;
   width: 100%;
   margin-top: 15px;
+  display: none;
 
+  @mixin atMedium {
+    display: flex;
+  }
 
   &__right {
     color: white;
@@ -23,11 +27,14 @@
     li {
       padding: 20px 75px;
     }
+
+
   }
 
   &__logo {
     font-size: 1.5rem;
     font-weight: bold;
+
   }
 
   a {
